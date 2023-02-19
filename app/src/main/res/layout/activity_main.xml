@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#6200ED"
+        >
+        <TextView
+            android:id="@+id/textView5"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="@font/sensations"
+            android:textColor="#FFFFFF"
+            android:layout_margin="10dp"
+            android:text="SignIt"
+            />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/folder"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginStart="250dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/baseline_folder_24" />-->
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        >
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/sign_pad"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:penColor="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:text="clear"
+            android:fontFamily="@font/sensations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/saveBtn"
+            android:text="Save"
+            android:fontFamily="@font/sensations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>
